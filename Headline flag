@@ -1,0 +1,84 @@
+//--------------------html part--------------------
+
+<div class="wrapper">
+        <div class="timeline">
+            <div class="timeline-entry">
+                <div class="timeline-flag">
+                    Headline Flag
+                </div>
+                <div class="timeline-contant">
+                    Here comes some content...
+                </div>
+            </div>
+            <div class="timeline-entry">
+                <div class="timeline-flag">
+                    Headline Flag
+                </div>
+                <div class="timeline-contant">
+                    Here comes some content...
+                </div>
+            </div>
+            <div class="timeline-entry">
+                <div class="timeline-flag">
+                    Headline Flag
+                </div>
+                <div class="timeline-contant">
+                    Here comes some content...
+                </div>
+            </div>
+        </div>
+    </div>
+
+//-----------------------------css part---------------------------
+
+  
+        body{
+            background-color: gray;
+            height: 200px;
+        }
+        .wrapper{
+            max-width: 80%;
+            margin: 100% auto;
+        }
+        .timeline{
+            width: 100%;
+            border-left: 3px solid ;
+        }
+        .timeline-entry{
+            background: #fff;
+            display: block;
+            width: 300px;
+            margin-top: 25px;
+            margin-left: 25px;
+            position: relative;
+            padding: 15px;
+        }
+        .timeline-entry::before{
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 0;
+            border: 10px solid transparent;
+            border-right-color: #fff;
+        }
+
+        .timeline-flag{
+            padding-bottom: 4px;
+            font-size: 24px;
+        }
+
+        .timeline-entry::after{
+            content: "";
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: #111;
+            background-color: red;
+        }
+        .timeline-entry.active::after{
+            content: "";
+            background-color: #111;
+        }
