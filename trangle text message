@@ -1,0 +1,28 @@
+//---------------------------css part------------------
+    <style>
+        .bubble{
+            position: relative;
+            width: 250px;
+            height: 100px;
+            margin: 150px;
+            background: #eee;
+            border-radius: 15px;
+            padding: 12px;
+            font-size: 24px;
+        }
+
+        .bubble::before{
+            content: "";
+            position: absolute;
+            bottom: -30px; left: 25px;
+            border-top: 30px solid #eee;
+            border-right: 20px solid transparent;
+            border-left: 20px solid transparent;
+        }
+
+    </style>
+//--------------------html part-------------------------------
+    <div class="bubble">
+        Hii, How are YOU ?
+    </div>
+    
