@@ -1,0 +1,44 @@
+// ----------------css part--------------------------
+
+    <style>
+        input[name="email"]:valid {border: 4px solid #12ec12;}
+        input[name="email"]:invalid {border: 4px solid red;}
+        input[type="password"]:required {border: 4px solid hotpink;}
+        input[type="number"]:in-range {border: 4px solid darkorchid;}
+        input[type="checkbox"]:checked + p {color: blue;}
+
+        p:read-write{color: darkcyan;}
+        
+
+        .first p:first-of-type::first-letter{color: red; font-size: 36px;}
+        .first p:first-of-type::first-line{color: green; font-size: 26px;}
+        .first p:last-of-type::after{content:"Added some text";}
+        .first p:last-of-type::before{content:"Added some text for the beginning  ";}
+
+    </style>
+
+//-----------------------------------Html Part-------------------------------    
+
+    <div>
+        <label for="">Name</label>
+        <input type="text" name="name" placeholder="name">
+        <label for="">Email</label>
+        <input type="email" name="email" placeholder="Email">
+        <label for="">Password</label>
+        <input type="password" name="password" placeholder="password" required>
+        <label for="">Contact</label>
+        <input type="number" name="number" placeholder="Number">
+        <label for="">Male</label>
+        <input type="checkbox" name="checkbox">
+        <p>something</p>
+
+        <p contenteditable> text something</p>
+        <p>text only</p>
+        <p>text more only</p>
+        <p>text  more only</p>
+    </div>
+
+
+    <div class="first">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tenetur voluptatem, expedita earum nam quae perferendis exercitationem, neque, nostrum possimus eos temporibus magni eligendi inventore placeat tempore ipsam? Quaerat, sint!</p>
+    </div>
