@@ -1,0 +1,48 @@
+//------------------------------css part----------------------
+
+    <style>
+        table{
+            width: 300px;
+            height: 400px;
+            border: 0px;
+            border: 1px solid red;
+            border-spacing: 0;
+
+        }
+        table td{
+            border: 1px solid red;
+            text-align: right;
+          padding: 20px;
+        }
+        .small-column{
+            width: 50px;
+        }
+    </style>
+//--------------------------html part-------------------
+    <h2>Table</h2>
+    <table border="2px">
+        <thead style="background-color: aquamarine;">
+            <tr>
+                <th>Column-1</th>
+                <th class="small-column">Column-2</th>
+                <th>Column-3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">data1-1</td>
+                <td>data2-1</td>
+                <td>data3-1</td>
+            </tr>
+            <tr>
+                <td>data2-2</td>
+                <td>data3-2</td>
+            </tr>
+        </tbody>
+        <tfoot style="background-color: chocolate;">
+            <tr>
+                <td colspan="2">total-1</td>
+                <td>data3-3</td>
+            </tr>
+        </tfoot>
+    </table>
