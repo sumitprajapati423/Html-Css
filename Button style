@@ -1,0 +1,61 @@
+//-----------------html part----------------
+<span class="button">Defalut</span><br>
+    <span class="read">Read</span><br>
+    <span class="more">More</span><br>
+    <span class="continue">Continue</span><br>
+    <span class="cancel">Cncel</span>
+
+//---------------css part------------------
+span.button{
+    border: 1px solid black;
+    border-radius: 15px 5px;
+    display: block;
+    max-width: 100px;
+    font-size: .7em;
+    padding: .3em 1em .2em  1em;
+    margin: .3em;
+}
+
+span.read{
+    border: 1px solid black;
+    border-radius: 15px 5px;
+    display: block;
+    max-width: 100px;
+    font-size: .7em;
+    padding: .3em 1em .2em  1em;
+    margin: .3em;
+    background-color: aquamarine;
+}
+
+span.more{
+    border: 1px solid black;
+    border-radius: 15px 5px;
+    display: block;
+    max-width: 100px;
+    font-size: .7em;
+    padding: .3em 1em .2em  1em;
+    margin: .3em;
+    background-color: blueviolet;
+}
+
+span.continue{
+    border: 1px solid black;
+    border-radius: 15px 5px;
+    display: block;
+    max-width: 100px;
+    font-size: .7em;
+    padding: .3em 1em .2em  1em;
+    margin: .3em;
+    background-color: burlywood;
+}
+
+span.cancel{
+    border: 1px solid black;
+    border-radius: 15px 5px;
+    display: block;
+    max-width: 100px;
+    font-size: .7em;
+    padding: .3em 1em .2em  1em;
+    margin: .3em;
+    background-color: brown;
+}
