@@ -1,0 +1,45 @@
+// css------------------------------------
+
+<style>
+        ul * li { color: red;}
+        ul * * li{color: green;}
+        ul * * * li{color: blue;}
+    </style>
+
+// ---html---------------------------------
+
+    <div>
+            <ul>
+                <li> max</li>
+                <li>piter</li>
+                <ul>
+                    <li>sum</li>
+                    <li>num</li>
+                    <ul>
+                        <li>hero</li>
+                        <li>zero</li>
+                        <ul>
+                            <li>abc</li>
+                            <li>cba</li>
+                        </ul>
+                    </ul>
+                </ul>
+                
+            </ul>
+            
+            
+    </div>
+
+    <ul>
+        <li>2</li>
+        <li>2</li>
+        <ul>
+            <li>3</li>
+            <li>3</li>
+            <ul>
+                <li>4</li>
+                <li>4</li>
+            </ul>
+        </ul>
+    </ul>
+    
