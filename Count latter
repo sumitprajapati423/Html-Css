@@ -1,0 +1,21 @@
+<script>
+
+     var sum = "maharashtra"
+     var lettercount={};
+
+     for(let i=0; i<sum.length;i++){
+        letter= sum[i]
+
+        if(lettercount[letter]){
+            lettercount[letter]++
+        }
+        else{
+            lettercount[letter]=1
+        }
+     }
+     console.log(sum)
+     console.log(lettercount)
+
+
+     
+    </script>
