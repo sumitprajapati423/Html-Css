@@ -1,0 +1,41 @@
+// create a common component---------------add the code (bootstrap css use)
+
+<div class="card">
+  <div class="card-body text-center">
+    <ng-content select=".card-title"></ng-content>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod possimus quibusdam dolores labore provident voluptatum?</p>
+    <ng-content select=".btn"></ng-content>
+  </div>
+</div>
+
+// use in app-component this code----------
+
+<div class="row p-3 g-2">
+<div class="col-md-6">
+  <app-card>
+    <h5 class="card-title">laptop</h5>
+    <button class="btn btn-success"> add</button>
+  </app-card>
+</div>
+<div class="col-md-6">
+
+  <app-card>
+    <h5 class="card-title">tv</h5>
+    <button class="btn btn-success"> add</button>
+  </app-card>
+</div>
+<div class="col-md-6">
+
+  <app-card>
+    <h5 class="card-title">mobile</h5>
+    <button class="btn btn-success"> add</button>
+  </app-card>
+</div>
+<div class="col-md-6">
+
+  <app-card>
+    <h5 class="card-title">tab</h5>
+    <button class="btn btn-success"> add</button>
+  </app-card>
+</div>
+</div>
