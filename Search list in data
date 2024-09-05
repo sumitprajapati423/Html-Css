@@ -1,0 +1,43 @@
+// app-module.ts------------
+      FormsModule
+
+//  html---------------
+
+<input type="text" [(ngModel)]="filterby" (keyup)="search()">
+
+<div>
+    <ul>
+        <li *ngFor="let user of userdata">
+        {{user.name}}
+        </li>
+    </ul>
+</div>
+
+// ts -----------------
+
+ userdata = []
+  filterby;
+
+  mydata=[
+    {
+      name:"ramesh"
+    },
+    {
+      name:"ram"
+    },
+    {
+      name:"rahul"
+    },
+    {
+      name:"rohit"
+    },
+  ]
+
+  ngOnInit(): void {
+      this.userdata =[ ...this.mydata]
+  }
+  
+  search(){
+    this.userdata =
+    this.userdata = [...this.mydata.filter(user => user.name.includes(this.filterby))]; 
+  }
