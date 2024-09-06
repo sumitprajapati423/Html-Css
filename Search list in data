@@ -41,3 +41,17 @@
     this.userdata =
     this.userdata = [...this.mydata.filter(user => user.name.includes(this.filterby))]; 
   }
+
+
+
+//-----------------------Second type search event apply------------------------------------------
+// html file apply --------
+      (click)="searchEvent(event)"
+
+//---------tf file apply ---
+      searchEvent(event:any) {
+          this.searchTemplate = this.choosedata.filter((x)=>{
+            let re = new RegExp(String.raw `${event.target.value.toLowerCase()}`, 'g')
+            return re.test(x.banner_name.toLowerCase())
+          })
+        }
