@@ -1,0 +1,90 @@
+// Parent component to send data child compnent    and    child component data send to parent component-----
+
+// parent html---------------
+<div class="alert alert-light d-flex  border justify-content-between" *ngIf="addedproduct">
+<strong class="text-success ">{{addedproduct}} is selcted Added in Cart</strong>&nbsp;
+    <button class="btn btn-success ml-auto">Checkout</button>
+</div>
+
+<div class="row">
+<div class="col-md-12 d-flex justify-content-between align-items-center">
+    <div class="card" style="width: 18rem;">
+      <img src="https://cdn.pixabay.com/photo/2024/04/01/09/29/coffee-8668442_1280.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mobile</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button (click)="selectedproduct('Mobile')">Go somewhere</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="https://cdn.pixabay.com/photo/2024/04/01/09/29/coffee-8668442_1280.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tv</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button (click)="selectedproduct('Tv')">Go somewhere</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="https://cdn.pixabay.com/photo/2024/04/01/09/29/coffee-8668442_1280.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Laptop</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button (click)="selectedproduct('Laptop')">Go somewhere</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="https://cdn.pixabay.com/photo/2024/04/01/09/29/coffee-8668442_1280.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Washing  </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button (click)="selectedproduct('Washing')">Go somewhere</button>
+      </div>
+    </div>
+  </div>
+  <app-child [productselected]="proselected" [selectedProduct]="seldProduct" (addedproduct)="Onaddedproduct($event)"></app-child>
+
+//parent componet ts file---------------------------------------------
+
+export class ParentComponent {
+
+  proselected:boolean = false
+  seldProduct:string='';
+  addedproduct:any;
+  // addproduct:any
+  selectedproduct(product:any){
+    this.proselected = true
+    this.seldProduct= product
+
+  }
+  addcard(){
+      // this.addedproduct = this.selectedProduct
+//
+  }
+  Onaddedproduct(proed:any){
+    this.addedproduct = proed
+  }
+}
+
+
+//  child componet htlm file-------------------------------
+
+<div class="col-md-12 bg-success text-center py-4">
+  <h3 *ngIf="!productselected">Pleace select any Product</h3>
+  <h3 *ngIf="productselected">{{selectedProduct}} is selected</h3>
+  <button class="btn btn-success border" (click)="addcard()">Add to card</button>
+</div>
+
+//---- child component ts file-------------------------
+
+export class ChildComponent {
+
+
+ @Input() productselected:boolean = false
+ @Input() selectedProduct:string='';
+ @Output() addedproduct = new EventEmitter<any>();
+
+  addcard(){
+    this.addedproduct.emit( this.selectedProduct)
+
+}
+}
