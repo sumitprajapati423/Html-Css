@@ -1,0 +1,16 @@
+//html file--------------
+<label for="">Enter your Age</label>
+<input type="text" (input)="ABC()" [(ngModel)]="age">
+<div [ngSwitch]="enable">
+  <p *ngSwitchCase="true">You are visible</p>
+  <p *ngSwitchDefault>You are not visible</p>
+</div>
+
+  //  ts file--------------
+
+   age:number=0;
+  enable:boolean=true;
+
+  ABC(){
+    this.enable = this.age>=18;
+  }
