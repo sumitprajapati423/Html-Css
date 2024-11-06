@@ -1,0 +1,30 @@
+// html file--------------------
+        <div class="col-md-12">
+                <div class=" color_picker">
+                    <div class="my-2  mx-1 fs-6 color_text">
+                        <label for="colorPicker"> {{ Textcolor }}</label>&nbsp;
+                    </div>&nbsp;
+                    <div class="my-1"  style="position: absolute; margin-left: 75px;">
+                        <input type="color" style="width: 32px; height: 32px; border: hidden;"   [(ngModel)]="Textcolor" cpColorPicker id="colorPicker" />
+                    </div>
+                </div>
+            </div>
+
+  // ts file-------------------------------------
+      Textcolor:string='#000000'
+
+  // css file--------------------------------
+        .color_picker{
+              width: 115px;
+              // padding: 5px;
+              display: flex;
+              justify-content: start;
+              align-content: center;
+              border: 1px solid #6c757d;
+              border-radius: .3rem;
+          }
+
+    .color_text{
+         align-content: center;
+         position: relative;
+    }
